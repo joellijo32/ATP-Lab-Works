@@ -1,25 +1,21 @@
-from datetime import datetime
-print("\n")
-date = input("Enter Your Birthdate in the format dd-mm-yyyy : ")
-values = date.split("-")
-day = int(values[0])
-month = int(values[1])
-year_of_birth = int(values[2])
-year_after_birth = int(datetime.now().year - year_of_birth)
-
-print("You are ", year_after_birth, "Years old.")
-
-end_date = datetime(int(datetime.now().year),int(datetime.now().month),int(datetime.now().day ))
-start_date = (datetime(year_of_birth ,month, day))
-nnumber_of_days_lived  =  int((end_date - start_date).days)
-
-print("You've Lived " , nnumber_of_days_lived, " Days....bruh")
+#Day One 
 
 print("\n")
-
-
-
-
-
-
-
+money_left = int(input("Enter the Amount of Left : "))
+percent_to_spend = float(input("Enter the Percentage of Amount Willing to Spend (without \'%\' symbol) : "))
+print("Enter the Cost of the Items (3 Nos) Bought : ")
+list_of_cost = []
+for i in range(3): 
+    list_of_cost.append(float(input()))
+amount_that_can_be_spent = float((money_left*percent_to_spend)/100)
+total_cost = sum(list_of_cost)
+if total_cost > amount_that_can_be_spent: 
+    print("The Items CANNOT be bought.")
+    print("Lack of ",(total_cost-amount_that_can_be_spent)," Amount of Money")
+else: 
+    print("The Items CAN be bought")
+    if (amount_that_can_be_spent-total_cost) > 0 : 
+        print("Balance Would be ", (amount_that_can_be_spent-total_cost), " Amount of Money")
+    else: 
+        print("Balance Amount: " , 0)
+print("\n")                
