@@ -1,30 +1,30 @@
 telephone_directory = {}
 
 while True: 
-    
-    print("\nEnter 1 to Add a Contact")
-    print("\nEnter 2 to Update a Contact")
-    print("\nEnter 3 to Delete a Contact")
-    print("\nEnter 4 to Search for a Contact")
-    print("\nEnter 5 to Display All the Contacts")
-    print("\nEnter 6 to Exit")
-    print("\nEnter the Choice: ",end="")
+    print("\nTelephone Directory Menu: ")
+    print("1. Add a Contact")
+    print("2. Update a Contact")
+    print("3. Delete a Contact")
+    print("4. Search for a Contact")
+    print("5. Display all the Contacts")
+    print("6. Exit")
+    print("Enter the Choice (1-6): ",end="")
     choice = int(input())
 
     # Adding
 
     if choice == 1: 
-        print("\n\nEnter the Name of the Contact: ",end="")
+        print("Enter the Name of the Contact: ",end="")
         name = input()
         print("Enter the Number: ",end="")
         number = int(input())
         telephone_directory[name] = number
-        print("\nThe Contact has been Successfully Added.")
+        print("The Contact has been Successfully Added.")
     
     # Updating 
 
     elif choice == 2: 
-        print("\n\nEnter the Name of the Contact to Udate: ",end="")
+        print("Enter the Name of the Contact to Udate: ",end="")
         name = input()
         if name not in telephone_directory: 
             print(f"{name} is Not in the Directory. Updation Failed .")
@@ -33,12 +33,12 @@ while True:
             print("Enter the Number to Update: ",end="")
             number = int(input())
             telephone_directory.update({name : number})
-            print("\nThe Number has been Updated Successfully.")
+            print("The Number has been Updated Successfully.")
     
     # Deleting
 
     elif choice == 3 : 
-        name = input("\n\nEnter the Name of the Contact to Delete: ")
+        name = input("Enter the Name of the Contact to Delete: ")
         if name not in telephone_directory: 
             print(f"{name} Not Found in the Directory. Deletion Failed.")
         else: 
@@ -48,7 +48,7 @@ while True:
     # Searching
 
     elif choice == 4: 
-        name = input("\n\nEnter the Name to Search: ")
+        name = input("Enter the Name to Search: ")
         if name not in telephone_directory : 
             print(f"{name} Not Found in the Directory.")
         else: 
@@ -58,15 +58,15 @@ while True:
     # Displaying
 
     elif choice == 5: 
-        print("\n\nDisplaying All the Contacts: \n")
+        print("Displaying All the Contacts: \n")
         for i in telephone_directory: 
             print(i,":",telephone_directory[i])
-        print("\nEnd of the List.")
+        print("End of the List.")
 
     # Exit 
 
     elif choice == 6: 
-        print("\n\nExiting the Program.\n")
+        print("Exiting the Program.\n")
         break
 
 

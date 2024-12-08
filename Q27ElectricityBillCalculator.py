@@ -37,5 +37,5 @@ print("\nCharge for Computers = ₹" + str(charge_for_computers))
 
 total_amount = charge_for_computers + charge_for_fan + charge_for_light+charge_for_washing_machines
 
-print("\n\nTotal Amout = ₹",total_amount)
+print("\n\nTotal Amout = ₹" + str(total_amount))
 print("\n\n\t\t\tTHANK YOU\n")
